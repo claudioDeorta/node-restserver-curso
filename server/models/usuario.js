@@ -54,6 +54,7 @@ usuarioSchema.methods.toJOSON = function() {
     return userObject;
 }
 
-usuarioSchema.plugin(uniqueValidator, { message: '{PATH} debe de der unico' })
+//vqlidacion personalizada de unique 
+usuarioSchema.plugin(uniqueValidator, { message: '{PATH} debe de ser unico' })
 
 module.exports = mongoose.model('Usuario', usuarioSchema);
